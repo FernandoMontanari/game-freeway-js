@@ -13,10 +13,10 @@ let car1XPosition = 600;
 // LOAD IMAGES
 
 const backgroundImage = new Image();
-backgroundImage.src = '/images/estrada.png';
+backgroundImage.src = 'images/estrada.png';
 // PLAYER IMG
 const playerImage = new Image();
-playerImage.src = '/images/ator-1.png';
+playerImage.src = 'images/ator-1.png';
 // CAR 1 IMG
 const carImage1 = new Image();
 carImage1.src = 'images/carro-1.png';
