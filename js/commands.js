@@ -3,6 +3,8 @@ document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 let upPressed = false;
 let downPressed = false;
+let leftPressed = false;
+let rightPressed = false;
 
 function keyDownHandler(event) {
     if (event.key === "Up" || event.key === "ArrowUp") {
@@ -11,11 +13,11 @@ function keyDownHandler(event) {
         downPressed = true;
     }
 
-    /*if (multiplayer && event.key === "w") {
-        upPressedP2 = true
-    } else if (multiplayer || event.key === "s") {
-        downPressedP2 = true;
-    }*/
+    if (event.key === "Left" || event.key === "ArrowLeft") {
+        leftPressed = true;
+    } else if (event.key === "Right" || event.key === "ArrowRight") {
+        rightPressed = true;
+    }
 }
 
 function keyUpHandler(event) {
@@ -25,19 +27,33 @@ function keyUpHandler(event) {
         downPressed = false;
     }
 
-    /*if (multiplayer && event.key === "w") {
-        upPressedP2 = false
-    } else if (multiplayer || event.key === "s") {
-        downPressedP2 = false;
-    }*/
+    if (event.key === "Left" || event.key === "ArrowLeft") {
+        leftPressed = false;
+    } else if (event.key === "Right" || event.key === "ArrowRight") {
+        rightPressed = false;
+    }
 }
 
 function playerMovement() {
     if (upPressed) {
-        player1YPosition -= 3;
+        yPlayer -= 3;
     } 
     
     if (downPressed) {
-        player1YPosition += 3;
+        if (yPlayer < 370) {
+            yPlayer += 3;
+        }
+    }
+
+    if (leftPressed) {
+        if (xPlayer > 0) {
+            xPlayer -= 3;
+        }
+    } 
+    
+    if (rightPressed) {
+        if (xPlayer < 470) {
+            xPlayer += 3;
+        }
     }
 }
