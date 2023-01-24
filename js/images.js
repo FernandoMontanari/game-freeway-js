@@ -18,6 +18,8 @@ carImage2.src = 'images/carro-2.png';
 const carImage3 = new Image();
 carImage3.src = 'images/carro-3.png';
 
+let carsImages = [carImage1, carImage2, carImage3];
+
 
 // DRAW IMAGES
 function drawImages(image, x, y, w, h ) {
