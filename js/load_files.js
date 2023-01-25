@@ -20,6 +20,23 @@ carImage3.src = 'images/carro-3.png';
 
 let carsImages = [carImage1, carImage2, carImage3, carImage1, carImage2, carImage3];
 
+// LOAD AUDIOS
+
+// BACKGROUND SONG
+const audioBgTrack = new Audio();
+audioBgTrack.setAttribute("autoplay", "autoplay");
+audioBgTrack.src = 'audio/trilha.mp3'
+audioBgTrack.volume = 0.1;
+
+// AUDIO WHEN PLAYER SCORE
+const audioScore = new Audio();
+audioScore.src = 'audio/pontos.wav'
+audioScore.volume = 0.2;
+
+// AUDIO WHEN PLAYER COLLIDE WITH CARS
+const audioCollision = new Audio();
+audioCollision.src = 'audio/colidiu.mp3'
+audioCollision.volume = 0.2;
 
 // DRAW IMAGES
 function drawImages(image, x, y, w, h ) {

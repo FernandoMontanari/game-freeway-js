@@ -16,7 +16,12 @@ function endGame() {
     }
 }
 
+function playBgAudio(){
+    audioBgTrack.play();
+}
+
 function screenUpdate() {
+
     drawBackground();
     drawPlayer();
     drawCars();
@@ -28,6 +33,7 @@ function screenUpdate() {
     score();
     drawPlayerLife();
     endGame();
+    playBgAudio();
 }
 
 setInterval(screenUpdate, refreshPageVelocity);
