@@ -24,8 +24,8 @@ let carsImages = [carImage1, carImage2, carImage3, carImage1, carImage2, carImag
 
 // BACKGROUND SONG
 const audioBgTrack = new Audio();
-audioBgTrack.setAttribute("autoplay", "autoplay");
 audioBgTrack.src = 'audio/trilha.mp3'
+audioBgTrack.loop = 'true';
 audioBgTrack.volume = 0.1;
 
 // AUDIO WHEN PLAYER SCORE

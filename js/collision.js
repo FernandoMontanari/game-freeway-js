@@ -6,7 +6,7 @@ function checkCollision() {
         xPlayer + (wPlayer - 20) > xCars[i] &&
         yPlayer < yCars[i] + (hCars - 5) &&
         (hPlayer - 5) + yPlayer > yCars[i]){
-            audioCollision.play();
+            playSoundColision();
             resetPlayerPosition();
             losePoints();
             loseLife();

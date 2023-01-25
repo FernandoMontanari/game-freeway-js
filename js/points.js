@@ -11,7 +11,7 @@ function drawPoints() {
 function score() {
     if ( yPlayer < 15) {
         playerPoints++;
-        audioScore.play();
+        playSoundScore();
         resetPlayerPosition();
         increaseVelocity();
     }

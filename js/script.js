@@ -16,10 +16,6 @@ function endGame() {
     }
 }
 
-function playBgAudio(){
-    audioBgTrack.play();
-}
-
 function screenUpdate() {
 
     drawBackground();
@@ -33,7 +29,7 @@ function screenUpdate() {
     score();
     drawPlayerLife();
     endGame();
-    playBgAudio();
+    playSoundBg();
 }
 
 setInterval(screenUpdate, refreshPageVelocity);
