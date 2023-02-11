@@ -9,7 +9,7 @@ function drawPoints() {
 }
 
 function score() {
-    if ( yPlayer < 15) {
+    if ( player.y < 15) {
         playerPoints++;
         playSoundScore();
         resetPlayerPosition();

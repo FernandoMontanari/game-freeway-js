@@ -7,8 +7,8 @@ canvas.height = 400;
 const refreshPageVelocity = 10;
 
 function endGame() {
-    if (playerLife < 0){
-        playerLife = 3;
+    if (player.life < 0){
+        player.life = 3;
         playerPoints = 0;
         increaseStack = 0;
         decreaseStack = 0;

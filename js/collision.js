@@ -2,10 +2,10 @@
 // FUNCTION TO CHECK COLLISION WITH ALL CARS
 function checkCollision() {
     for ( let i = 0; i < carsImages.length; i++) {
-        if ( xPlayer < xCars[i] + (wCars - 25) && 
-        xPlayer + (wPlayer - 20) > xCars[i] &&
-        yPlayer < yCars[i] + (hCars - 5) &&
-        (hPlayer - 5) + yPlayer > yCars[i]){
+        if ( player.x < xCars[i] + (wCars - 25) && 
+        player.x + (player.w - 20) > xCars[i] &&
+        player.y < yCars[i] + (hCars - 5) &&
+        (player.h - 5) + player.y > yCars[i]){
             playSoundColision();
             resetPlayerPosition();
             losePoints();
@@ -16,5 +16,5 @@ function checkCollision() {
 
 // PLAYER RETRUNS TO INITIAL POINT
 function resetPlayerPosition() {
-    yPlayer = 366;
+    player.y = 366;
 }

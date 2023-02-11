@@ -36,24 +36,24 @@ function keyUpHandler(event) {
 
 function playerMovement() {
     if (upPressed) {
-        yPlayer -= 3;
+        player.y -= 3;
     } 
     
     if (downPressed) {
-        if (yPlayer < 370) {
-            yPlayer += 3;
+        if (player.y < 370) {
+            player.y += 3;
         }
     }
 
     if (leftPressed) {
-        if (xPlayer > 0) {
-            xPlayer -= 3;
+        if (player.x > 0) {
+            player.x -= 3;
         }
     } 
     
     if (rightPressed) {
-        if (xPlayer < 470) {
-            xPlayer += 3;
+        if (player.x < 470) {
+            player.x += 3;
         }
     }
 }
